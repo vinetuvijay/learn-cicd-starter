@@ -24,21 +24,6 @@ jobs:
       - name: Build production binary
         run: ./scripts/buildprod.sh
 
-      # # =========================
-      # # GCP AUTH STEP (IMPORTANT)
-      # # =========================
-      # - name: Authenticate to Google Cloud
-      #   uses: google-github-actions/setup-gcloud@v2
-      #   with:
-      #     credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
-
-      # # =========================
-      # # CONFIGURE DOCKER AUTH
-      # # =========================
-      # - name: Configure Docker for Artifact Registry
-      #   run: |
-      #     gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
-
       # =========================
       # BUILD & PUSH IMAGE
       # =========================
